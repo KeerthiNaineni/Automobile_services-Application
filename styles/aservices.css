@@ -1,0 +1,111 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
+/* General styles */
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#80b4c4;
+}
+
+/* Container styles */
+.container {
+    background-color: #27dab6;
+    width: 40%;
+    padding: 25px;
+    margin: 120px auto; /* Added top margin to avoid overlap with navbar */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow for emphasis */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Service form styles */
+.services_form .heading {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.add_service {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input_fields {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding doesn't affect input size */
+}
+
+.submit_btn {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit_btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        width: 50%; /* Slightly larger width on larger screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 70%; /* Adjust form width on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%; /* Full width on smaller screens */
+    }
+    .heading {
+        font-size: 20px; /* Adjust heading size on smaller screens */
+    }
+    .input_fields {
+        font-size: 14px; /* Slightly smaller text input fields */
+    }
+    .submit_btn {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+.display_message {
+    position: relative;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.display_message span {
+    font-size: 16px;
+    color: #333;
+}
+
+.display_message i {
+    cursor: pointer;
+    color: #333;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+
+

@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style:none;
+    text-decoration:none;
+}
+.sidebar{
+    position:fixed;
+    left:-250px;
+    width:250px;
+    height:100%;
+    background:#042331;
+transition:all .5s ease;
+}
+.sidebar header{
+    font-size:22px;
+    color:white;
+    text-align:center;
+    line-height:70px;
+    background:#023e56;
+    user-select:none;
+}
+.sidebar ul a{
+    display: block;
+    height:100%;
+    width:100%;
+    line-height:65px;
+    font-size:20px;
+    color:white;
+    padding-left:40px;
+    box-sizing:border-box;
+    border-top:1px solid rgba(255,255,255,.1);
+    border-bottom:1px solid black;
+}
+ul li:hover a{
+    background-color: rgb(16, 143, 143);
+}
+#check{
+    display: none;
+}
+label #btn,label #cancel{
+    position:absolute;
+    cursor:pointer;
+    background:#042331;
+    border-radius:3px;
+}
+label #btn{
+    left:40px;
+    top:25px;
+    font-size:35px;
+    color:white;
+    padding:6px 12px;
+    transition:all .5s ;
+}
+label #cancel{
+    z-index:1111;
+    left:-195px;
+    top:17px;
+    font-size:30px;
+    color:#0a5275;
+    padding:4px 9px;
+    transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+    left:0;
+
+}
+#check:checked ~ label #btn{
+    left:250px;
+    opacity:0;
+    pointer-events: none;
+}
+#check:checked ~ label #cancel{
+    left:195px;
+
+} */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    background-color: #042331;
+}
+
+.sidebar {
+    position: fixed;  /* Ensure the sidebar is always fixed */
+    left:-250px;
+    top: 0;           /* Keep it fixed at the top */
+    width: 250px;
+    height: 100%;
+    background: #042331;
+    transition: all 0.5s ease;
+}
+
+.sidebar header {
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #023e56;
+    user-select: none;
+}
+
+.sidebar ul a {
+    display: block;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid black;
+}
+
+ul li:hover a {
+    background-color: rgb(16, 143, 143);
+}
+
+#check {
+    display: none;
+}
+
+label #btn{
+    position:fixed;
+    cursor: pointer;
+    background: #042331;
+    border-radius: 3px;
+    top: 25px;
+    left: 20px; /* Ensures the buttons stay near the top left */
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all 0.5s;
+    z-index: 1000;
+}
+label #cancel{
+    position:fixed;
+    cursor: pointer;
+    background: #042331;
+    border-radius: 3px;
+    top: 15px;
+    left: -5px; /* Ensures the buttons stay near the top left */
+    font-size: 30px;
+    color: white;
+    padding: 6px 12px;
+    transition: all 0.5s;
+    z-index: 1000;
+}
+
+
+label #cancel {
+ display:none;
+}
+
+#check:checked ~ .sidebar {
+    left: 0;
+}
+
+#check:checked ~ label #btn {
+    display: none;
+}
+#check:checked ~ label #cancel {
+    display: block; /* Show cancel button when sidebar is opened */
+}
+
+#check:checked ~ label #cancel {
+    /* display: block; */
+    left:195px;
+}
+
+/* Content area */
+/* section {
+    flex-grow: 1;
+    background-color:#042331;
+    margin-left: 250px;  /* Push the content area to the right of the sidebar 
+    padding: 20px;
+    min-height: 100vh;}
+*/

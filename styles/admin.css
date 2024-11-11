@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    background-color: #042331;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #042331;
+    transition: all 0.5s ease;
+    z-index: 10; /* Ensure sidebar appears above content */
+}
+
+.sidebar header {
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #023e56;
+    user-select: none;
+}
+
+.sidebar ul a {
+    display: block;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid black;
+}
+
+ul li:hover a {
+    background-color: rgb(16, 143, 143);
+}
+
+#check {
+    display: none;
+}
+
+label #btn {
+    position: fixed;
+    cursor: pointer;
+    background: #042331;
+    border-radius: 3px;
+    top: 25px;
+    left: 20px; /* Ensures the buttons stay near the top left */
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all 0.5s;
+    z-index: 1000;
+}
+
+label #cancel {
+    position: fixed;
+    cursor: pointer;
+    background: #042331;
+    border-radius: 3px;
+    top: 15px;
+    left: -5px; /* Ensures the buttons stay near the top left */
+    font-size: 30px;
+    color: white;
+    padding: 6px 12px;
+    transition: all 0.5s;
+    z-index: 1000;
+    display: none; /* Hide initially */
+}
+
+#check:checked ~ .sidebar {
+    left: 0;
+}
+
+#check:checked ~ label #btn {
+    display: none;
+}
+
+#check:checked ~ label #cancel {
+    display: block; /* Show cancel button when sidebar is opened */
+    left: 195px;
+}
+
+section#content-area {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: url('home.jpg') no-repeat center center/cover;
+    background-size: cover;  /* Ensure the image covers the page */
+    background-position: center center;  /* Centers the image */
+    overflow: hidden;  /* Prevent scrolling */
+    margin-left: 6px; /* Leaves space for the sidebar */
+    z-index: 1; /* Make sure the content is above the background */
+}
+
+.sidebar {
+    z-index: 10; /* Keep sidebar above the content */
+}
+
+#check:checked ~ section#content-area {
+    margin-left: 0; /* Adjust the content area when the sidebar is open */
+}

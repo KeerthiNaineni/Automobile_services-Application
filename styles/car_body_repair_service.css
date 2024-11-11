@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.service-section {
+    font-family: 'Poppins', sans-serif !important; /* Apply Poppins only to this section */
+}
+
+.data h3 {
+    font-size: 30px;
+}
+
+.servicedetail {
+    width: 90%;
+    max-width: 1063px;
+    background-color: #dddddd;
+    margin: 100px auto;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+#service-image {
+    width:507px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.data {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.data p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* .data .stylingul {
+    padding-left: 20px; /* Add padding for the list 
+    margin: 0; /* Remove margin to avoid spacing issues 
+} */
+.data .service-list {
+    padding-left: 20px;
+    margin: 0;
+}
+.data .offerprice {
+    color: red;
+    font-size: 25px;
+}
+
+.data .bookservice {
+    padding: 5px 6px;
+    display: inline-block; 
+    background-color: rgb(255, 0, 0); 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 1.3em; 
+    cursor: pointer; 
+    text-align: center; 
+    transition: background-color 0.3s; 
+    margin-top: 4px; 
+    max-width: 200px; 
+    width: auto; 
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .servicedetail {
+        flex-direction: column; /* Stack elements on smaller screens */
+        margin: 20px; /* Reduced margin */
+    }
+
+    #service-image {
+        width: 100%; /* Make image responsive */
+        max-width: 400px; /* Limit max width */
+    }
+
+    .data h3 {
+        font-size: 24px; /* Reduce font size */
+    }
+
+    .data p,
+    .data .offerprice,
+    .data .bookservice {
+        font-size: 18px; /* Reduce font size for readability */
+    }
+}
+
+@media (max-width: 480px) {
+    .data h3 {
+        font-size: 20px; /* Further reduce font size */
+    }
+
+    .data p,
+    .data .offerprice,
+    .data .bookservice {
+        font-size: 16px; /* Further reduce font size */
+    }
+}
+

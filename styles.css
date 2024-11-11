@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+header {
+    background-color: #004c67;
+    padding: 10px 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    z-index:1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+   /* margin-right: 10px;*/
+    width:50px;
+    height:auto;
+    vertical-align: middle; /* Align image vertically with text */
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 50px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    vertical-align: middle;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.nav-links a:hover {
+    background-color: #ff5e7f; /* Add the hover background color */
+}
+
+/* .nav-links a:nth-child(1) {
+    background-color: #ff5e7f; /* The background color for the first link 
+}*/
+
+/* .nav-links a:nth-child(2) {
+    background-color: #00596b;
+} */
+.nav-links i {
+    margin-left:-10px;
+    margin-right: 1px; /* Space between icon and text */
+    font-size:13px; /* Adjust the size of the icon */
+    color:whitesmoke; /* Icon color */
+    vertical-align: middle; /* Align with text */
+}
+.nav-links a:nth-child(3),
+.nav-links a:nth-child(4) {
+    background-color: #004c67;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .logo a {
+        margin-bottom: 10px;
+    }
+}
+.image-container {
+    position: absolute;
+    top: 60px; /* Adjust based on your navbar height */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px); /* Full viewport height minus navbar height */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container while maintaining its aspect ratio */
+}

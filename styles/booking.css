@@ -1,0 +1,123 @@
+/* Form container styling */
+.booking .heading-title{
+    text-align: center;
+    margin-top:30px;
+    font-size:50px;
+}
+.booking .book-form {
+    padding: 2rem;
+    background: #f1f1f1; /* Light gray background for the form */
+    border-radius: 8px;
+    max-width: 750px;
+    margin: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top:50px;
+}
+
+/* Flexbox layout for form fields */
+.booking .book-form .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Input box styling */
+.booking .book-form .flex .inputbox {
+    flex: 1 1 48%; /* Take about half the width of the form */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+.booking .book-form .flex .inputbox span {
+    font-size: 1rem;
+    color: #555; /* Dark gray color for labels */
+    margin-bottom: 0.5rem;
+}
+
+/* Input, textarea, and select styling */
+.booking .book-form .flex .inputbox input,
+.booking .book-form .flex .inputbox textarea,
+.booking .book-form .flex .inputbox select {
+    width: 85%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    color: #333;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+/* Dropdown styling */
+.booking .book-form .flex .inputbox select {
+    appearance: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z' fill='%236a1b9a'/%3E%3C/svg%3E") no-repeat right 1rem center;
+    background-size: 1rem;
+    width:94%;
+}
+
+/* Focus effect for inputs, textarea, and select */
+.booking .book-form .flex .inputbox input:focus,
+.booking .book-form .flex .inputbox textarea:focus,
+.booking .book-form .flex .inputbox select:focus {
+    border-color: #888;
+}
+
+/* Submit button styling */
+.booking .book-form .submit-btn {
+    width: 60%;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #fff;
+    background-color: #6a1b9a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 108px;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.booking .book-form .submit-btn:hover {
+    background-color: #4a148c;
+}
+
+/* Full-width input box for custom service description */
+.booking .book-form .flex .inputbox.full-width {
+    flex: 1 1 100%; /* Full width for custom service description */
+}
+.booking .book-form .flex #listed {
+    display: flex;
+    gap: 20px; /* Space between Service Name and Offer Price */
+    margin-bottom: 1rem;
+}
+
+/* Style adjustments for each inputbox2 element */
+.booking .book-form .flex #listed .inputbox2 {
+    flex: 1; /* Allows elements to take equal width within the flex container */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+.booking .book-form .flex #listed .inputbox2 span {
+    font-size: 1rem;
+    color: #555; /* Dark gray color for labels */
+    margin-bottom: 0.5rem;
+}
+
+/* Input styling */
+.booking .book-form .flex #listed .inputbox2 input {
+    width: 91%;
+    padding: 0.8rem 1rem;
+    gap:5px;
+    font-size: 1rem;
+    color: #333;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
